@@ -34,3 +34,38 @@ var height = 23;
 if (height == '23') {
     console.log('The == operator does type coercion!');
 }
+
+// --- Functions
+function calculateAge(birthYear) {
+    return 2020 - birthYear;
+}
+
+function f(x) {
+    console.log(`inside f: x=${x}`);
+    x = 5;
+    console.log(`inside f: x=${x} (after assignment)`);
+}
+let x = 3;
+console.log(`before calling f: x=${x}`);
+f(x);
+console.log(`after calling f: x=${x}`);
+
+var ageX = calculateAge(1990);
+console.log("Age of X is " + ageX);
+
+// --- Function Statements and Expressions
+var whatDoYouDo = function (job, firstName) {
+    switch (job) {
+        case 'teacher':
+            return firstName + ' teaches kids how to code.';
+        case 'driver':
+            return firstName + ' drives a cab in Lisbon.'
+        case 'designer':
+            return firstName + ' designs beautiful websites.'
+        default:
+            return firstName + ' does something else.'
+
+    }
+}
+
+console.log(whatDoYouDo('teacher', 'X'));
